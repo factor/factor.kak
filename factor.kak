@@ -44,7 +44,7 @@ provide-module factor %§
     add-highlighter shared/factor/code/ regex "^::? " 0:meta
     add-highlighter shared/factor/code/ regex "(^|\s)<PRIVATE(?=\s)" 0:meta
     add-highlighter shared/factor/code/ regex "\bPRIVATE>(?=\s)" 0:meta
-    add-highlighter shared/factor/code/ regex "\bCHAR: [^\s](?=\s)" 0:meta
+    add-highlighter shared/factor/code/ regex "\b(CHAR|COLOR|ROLL):\s+[^\s]+(?=\s)" 0:meta
 
     # functions
     add-highlighter shared/factor/code/ regex "^(?:(?:IDENTITY-)?MEMO|MACRO|GENERIC#?)?::?\s+([^\s]+)" 1:function
