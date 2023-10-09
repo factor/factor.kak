@@ -49,6 +49,7 @@ provide-module factor %§
     # functions
     add-highlighter shared/factor/code/ regex "^(?:(?:IDENTITY-)?MEMO|MACRO|GENERIC#?)?::?\s+([^\s]+)" 1:function
     add-highlighter shared/factor/code/ regex "^M::?\s+([^\s]+)\s+([^\s]+)(?=\s)" 1:type 2:function
+    add-highlighter shared/factor/code/ regex "^MAIN: ([^\s]+)$" 1:function
 
     # types
     add-highlighter shared/factor/code/ regex "^(?:MIXIN|UNION|ERROR):\s+([^\s]+)" 1:type
