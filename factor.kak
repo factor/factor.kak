@@ -23,6 +23,7 @@ provide-module factor %§
     add-highlighter shared/factor regions
     add-highlighter shared/factor/code default-region group
     add-highlighter shared/factor/comment region "(^|\s)! " $ fill comment
+    add-highlighter shared/factor/stack-effect region -recurse "\(" "(?<!:)(^|(?<=\s)|(?<=shuffle)|(?<=execute)|(?<=eval)|(?<=call))\((?=\s)" "\s\)(?=\s)" fill attribute
 
     # string
     add-highlighter shared/factor/string region '"' (?<!\\)(\\\\)*" group
@@ -47,7 +48,6 @@ provide-module factor %§
 
     # functions
     add-highlighter shared/factor/code/ regex "^(?:(?:IDENTITY-)?MEMO|MACRO|GENERIC#?)?::?\s+([^\s]+)" 1:function
-    add-highlighter shared/factor/stack-effect region -recurse "\(" "(?<!:)(^|\s)\((?=\s)" "\s\)(?=\s)" fill attribute
     add-highlighter shared/factor/code/ regex "^M::?\s+([^\s]+)\s+([^\s]+)(?=\s)" 1:type 2:function
 
     # types
