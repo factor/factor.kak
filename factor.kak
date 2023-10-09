@@ -51,9 +51,10 @@ provide-module factor %§
     add-highlighter shared/factor/code/ regex "^M::?\s+([^\s]+)\s+([^\s]+)(?=\s)" 1:type 2:function
 
     # types
-    add-highlighter shared/factor/code/ regex "^(?:MIXIN|UNION|TUPLE|ERROR):\s+([^\s]+)" 1:type
+    add-highlighter shared/factor/code/ regex "^(?:MIXIN|UNION|ERROR):\s+([^\s]+)" 1:type
     add-highlighter shared/factor/code/ regex "^INSTANCE::?\s+([^\s]+)\s+([^\s]+)(?=\s)" 1:type 2:type
     add-highlighter shared/factor/code/ regex "^C:\s+([^\s]+)\s+([^\s]+)(?=\s)" 1:function 2:type
+    add-highlighter shared/factor/code/ regex "^TUPLE:\s+([^\s]+)\s+<\s+([^\s]+)(?=\s)" 1:type 2:type
 
     # numbers
     add-highlighter shared/factor/code/ regex "\b(t|f)\b" 0:value
