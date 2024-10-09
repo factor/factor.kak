@@ -13,6 +13,12 @@ hook global WinSetOption filetype=factor %{
     set-option buffer extra_word_chars '<' '>' '{' '}' '[' ']' '(' ')' '!' '$' '%' '&' '*' '+' '-' '.' '/' ':' '=' '?' '@' '^' '_' '~' '#' "'" '`'
 }
 
+hook global BufSetOption filetype=factor %{
+    set-option buffer comment_line '!'
+    set-option buffer comment_block_begin '![=[ '
+    set-option buffer comment_block_end ' ]=] '
+}
+
 hook -group factor-highlight global WinSetOption filetype=factor %{
     add-highlighter window/factor ref factor
     hook -once -always window WinSetOption filetype=*. %{ remove-highlighter window/factor }
