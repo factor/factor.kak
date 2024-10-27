@@ -15,8 +15,8 @@ hook global WinSetOption filetype=factor %{
 
 hook global BufSetOption filetype=factor %{
     set-option buffer comment_line '!'
-    set-option buffer comment_block_begin '![=[ '
-    set-option buffer comment_block_end ' ]=] '
+    set-option buffer comment_block_begin '/* '
+    set-option buffer comment_block_end ' */ '
 }
 
 hook -group factor-highlight global WinSetOption filetype=factor %{
